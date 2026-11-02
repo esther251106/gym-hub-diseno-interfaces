@@ -42,8 +42,15 @@
     }
 
     &__tipo {
-      font-size: var(--tam);
       line-height: var(--interlineado-titulo);
+
+      &:nth-of-type(2) { font-size: var(--paso-5); }
+      &:nth-of-type(3) { font-size: var(--paso-4); }
+      &:nth-of-type(4) { font-size: var(--paso-3); }
+      &:nth-of-type(5) { font-size: var(--paso-2); }
+      &:nth-of-type(6) { font-size: var(--paso-1); }
+      &:nth-of-type(7) { font-size: var(--paso-0); }
+      &:nth-of-type(8) { font-size: var(--paso-menos-1); }
     }
 
     &__fila {

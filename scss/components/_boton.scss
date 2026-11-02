@@ -60,4 +60,15 @@
       background-color: var(--color-acento-tenue);
     }
   }
+
+  .boton--dorado {
+    border-color: var(--color-dorado);
+    background-color: var(--color-dorado);
+    color: var(--color-neutro-900);
+
+    &:hover {
+      background-color: var(--color-dorado);
+      filter: brightness(0.9);
+    }
+  }
 }

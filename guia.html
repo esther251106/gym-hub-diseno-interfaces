@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- TODO Fase 1: nombre de la comunidad de tu ficha de caso -->
-  <title>Guía de estilo · Pádel Las Palmeras</title>
+  <title>Guía de estilo · GYM HUB</title>
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
@@ -17,7 +17,7 @@
     Ruta B (VS Code): es tu lienzo de diseño.
   -->
   <header class="guia-cabecera contenedor">
-    <p><strong>Pádel Las Palmeras</strong> · Guía de estilo</p>
+    <p><strong>GYM HUB</strong> · Guía de estilo</p>
 
     <!-- Selector de tema sin JavaScript: lo lee :root:has() en tokens/_index.scss -->
     <fieldset class="selector-tema">
@@ -47,23 +47,99 @@
             <th scope="col">Contraste oscuro</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td><span class="muestra" style="--muestra: var(--color-texto)"></span></td>
-            <td><code>--color-texto</code></td>
-            <td>Texto principal</td>
-            <td>17,1:1 sobre fondo</td>
-            <td>17,1:1 sobre fondo</td>
-          </tr>
-          <tr>
-            <td><span class="muestra" style="--muestra: var(--color-acento)"></span></td>
-            <td><code>--color-acento</code></td>
-            <td>Botón principal, enlaces, selección</td>
-            <td>5,15:1 sobre superficie</td>
-            <td>5,12:1 sobre superficie</td>
-          </tr>
-          <!-- TODO Fase 1: una fila por cada token de $tema, con su uso y sus contrastes -->
-        </tbody>
+<tbody>
+  <tr>
+    <td><span class="muestra" style="--muestra: var(--color-fondo)"></span></td>
+    <td><code>--color-fondo</code></td>
+    <td>Fondo principal de la aplicación</td>
+    <td>15,98:1 con texto</td>
+    <td>15,98:1 con texto</td>
+  </tr>
+  <tr>
+    <td><span class="muestra" style="--muestra: var(--color-superficie)"></span></td>
+    <td><code>--color-superficie</code></td>
+    <td>Tarjetas y superficies de contenido</td>
+    <td>15,98:1 con texto</td>
+    <td>14,16:1 con texto</td>
+  </tr>
+  <tr>
+    <td><span class="muestra" style="--muestra: var(--color-texto)"></span></td>
+    <td><code>--color-texto</code></td>
+    <td>Texto principal</td>
+    <td>15,98:1 sobre fondo</td>
+    <td>15,98:1 sobre fondo</td>
+  </tr>
+  <tr>
+    <td><span class="muestra" style="--muestra: var(--color-texto-suave)"></span></td>
+    <td><code>--color-texto-suave</code></td>
+    <td>Texto secundario y aclaraciones</td>
+    <td>11,35:1 sobre fondo</td>
+    <td>8,51:1 sobre fondo</td>
+  </tr>
+  <tr>
+    <td><span class="muestra" style="--muestra: var(--color-borde)"></span></td>
+    <td><code>--color-borde</code></td>
+    <td>Separadores y bordes decorativos</td>
+    <td>—</td>
+    <td>—</td>
+  </tr>
+  <tr>
+    <td><span class="muestra" style="--muestra: var(--color-borde-control)"></span></td>
+    <td><code>--color-borde-control</code></td>
+    <td>Bordes de campos y controles</td>
+    <td>11,35:1</td>
+    <td>7,54:1</td>
+  </tr>
+  <tr>
+    <td><span class="muestra" style="--muestra: var(--color-acento)"></span></td>
+    <td><code>--color-acento</code></td>
+    <td>Botones principales y selección</td>
+    <td>12,43:1</td>
+    <td>4,52:1</td>
+  </tr>
+  <tr>
+    <td><span class="muestra" style="--muestra: var(--color-acento-hover)"></span></td>
+    <td><code>--color-acento-hover</code></td>
+    <td>Estado hover de botones y elementos interactivos</td>
+    <td>12,43:1</td>
+    <td>5,10:1</td>
+  </tr>
+  <tr>
+    <td><span class="muestra" style="--muestra: var(--color-sobre-acento)"></span></td>
+    <td><code>--color-sobre-acento</code></td>
+    <td>Texto sobre botones de acento</td>
+    <td>12,43:1</td>
+    <td>5,10:1</td>
+  </tr>
+  <tr>
+    <td><span class="muestra" style="--muestra: var(--color-acento-tenue)"></span></td>
+    <td><code>--color-acento-tenue</code></td>
+    <td>Fondos suaves para selecciones</td>
+    <td>12,43:1 con acento</td>
+    <td>5,07:1 con acento</td>
+  </tr>
+  <tr>
+    <td><span class="muestra" style="--muestra: var(--color-exito)"></span></td>
+    <td><code>--color-exito</code></td>
+    <td>Mensajes y estados de éxito</td>
+    <td>5,21:1</td>
+    <td>9,94:1</td>
+  </tr>
+  <tr>
+    <td><span class="muestra" style="--muestra: var(--color-exito-tenue)"></span></td>
+    <td><code>--color-exito-tenue</code></td>
+    <td>Fondo de mensajes de éxito</td>
+    <td>5,21:1 con éxito</td>
+    <td>9,94:1 con éxito</td>
+  </tr>
+  <tr>
+    <td><span class="muestra" style="--muestra: var(--color-foco)"></span></td>
+    <td><code>--color-foco</code></td>
+    <td>Indicador de foco del teclado</td>
+    <td>12,43:1</td>
+    <td>5,10:1</td>
+  </tr>
+</tbody>
       </table>
       </div>
     </section>
@@ -88,10 +164,14 @@
       <h2 id="espaciado">Espaciado</h2>
       <p>Múltiplos de 4 px. Ningún margen, relleno ni hueco usa un valor fuera de esta escala.</p>
 
+      <div class="guia__fila"><span class="barra" style="--ancho: var(--espacio-3xs)"></span><code>--espacio-3xs</code> 4 px</div>
       <div class="guia__fila"><span class="barra" style="--ancho: var(--espacio-2xs)"></span><code>--espacio-2xs</code> 8 px</div>
+      <div class="guia__fila"><span class="barra" style="--ancho: var(--espacio-xs)"></span><code>--espacio-xs</code> 12 px</div>
       <div class="guia__fila"><span class="barra" style="--ancho: var(--espacio-s)"></span><code>--espacio-s</code> 16 px</div>
       <div class="guia__fila"><span class="barra" style="--ancho: var(--espacio-m)"></span><code>--espacio-m</code> 24 px</div>
-      <!-- TODO Fase 1: completa la escala -->
+      <div class="guia__fila"><span class="barra" style="--ancho: var(--espacio-l)"></span><code>--espacio-l</code> 32 px</div>
+      <div class="guia__fila"><span class="barra" style="--ancho: var(--espacio-xl)"></span><code>--espacio-xl</code> 48 px</div>
+      <div class="guia__fila"><span class="barra" style="--ancho: var(--espacio-2xl)"></span><code>--espacio-2xl</code> 64 px</div>
     </section>
 
     <!-- ===================================================== -->
@@ -101,34 +181,69 @@
       <h3>Botón</h3>
       <p>Comprueba hover con el ratón y foco con la tecla Tab. En DevTools, el botón <code>:hov</code> fuerza cada estado.</p>
       <div class="guia__fila">
-        <button class="boton" type="button">Confirmar reserva</button>
-        <button class="boton boton--secundario" type="button">Volver</button>
+        <button class="boton" type="button">Crear rutina</button>
+        <button class="boton boton--secundario" type="button">Cancelar</button>
         <button class="boton" type="button" disabled>Desactivado</button>
       </div>
       <button class="boton boton--bloque" type="button">Ancho completo (móvil)</button>
 
-      <h3>Tarjeta de turno</h3>
+      <h3>Tarjeta de rutinas</h3>
       <!-- TODO Fase 1: completa scss/components/_turno.scss hasta que los 3 estados se distingan sin depender del color -->
       <fieldset class="guia__fila">
-        <legend>Turnos del jueves 29 de octubre</legend>
+        <legend>Selecciona una rutina</legend>
         <label class="turno">
-          <input class="turno__control" type="radio" name="turno" value="0900">
-          <span class="turno__hora">09:00 – 10:30</span>
-          <span class="turno__estado">Disponible · Pista Central</span>
+          <input class="turno__control" type="radio" name="rutina" value="piernas">
+          <span class="turno__hora">Piernas</span>
+          <span class="turno__estado">Disponible · 5 ejercicios</span>
         </label>
+
         <label class="turno">
-          <input class="turno__control" type="radio" name="turno" value="1030" disabled>
-          <span class="turno__hora">10:30 – 12:00</span>
-          <span class="turno__estado">Ocupado</span>
+          <input class="turno__control" type="radio" name="rutina" value="pecho" disabled>
+          <span class="turno__hora">Pecho y brazos</span>
+          <span class="turno__estado">No disponible</span>
         </label>
+
         <label class="turno">
-          <input class="turno__control" type="radio" name="turno" value="1800" checked>
-          <span class="turno__hora">18:00 – 19:30</span>
-          <span class="turno__estado">Disponible · Pista Central</span>
+          <input class="turno__control" type="radio" name="rutina" value="espalda" checked>
+          <span class="turno__hora">Espalda</span>
+          <span class="turno__estado">Seleccionada · 4 ejercicios</span>
         </label>
       </fieldset>
+        <!-- TODO Fase 1: contador de invitados y aviso de pago -->
+        <!-- Contador de invitados -->
+        <fieldset class="invitados">
+          <legend class="invitados__titulo">Personas adicionales</legend>
 
-      <!-- TODO Fase 1: contador de invitados y aviso de pago -->
+          <div class="invitados__opciones">
+            <label class="invitados__opcion">
+              <input class="invitados__control" type="radio" name="invitados" value="0" checked>
+              <span>0</span>
+            </label>
+
+            <label class="invitados__opcion">
+              <input class="invitados__control" type="radio" name="invitados" value="1">
+              <span>1</span>
+            </label>
+
+            <label class="invitados__opcion">
+              <input class="invitados__control" type="radio" name="invitados" value="2">
+              <span>2</span>
+            </label>
+
+            <label class="invitados__opcion">
+              <input class="invitados__control" type="radio" name="invitados" value="3">
+              <span>3</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <h3>Aviso de pago</h3>
+        <section class="aviso">
+          <h4 class="aviso__titulo">Información de pago</h4>
+          <p class="aviso__importe">9,99 €</p>
+          <p class="aviso__telefono">Teléfono: 600 123 456</p>
+          <p class="aviso__concepto">Concepto: CUOTA MENSUAL GYM HUB</p>
+        </section>
     </section>
   </main>
 

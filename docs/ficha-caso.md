@@ -5,16 +5,16 @@
 
 | Dato | Tu caso |
 | --- | --- |
-| N.º de caso | |
-| Comunidad (razón social) | Comunidad de Propietarios … |
+| N.º de caso | Propio|
+| Comunidad (razón social) | GYM HUB |
 | CIF ficticio | H-0000000_ |
-| Domicilio | |
-| Correo de contacto | …@….example |
+| Domicilio | Aplicación web|
+| Correo de contacto |gymhub@gmail.com |
 | Teléfono Bizum de la comunidad | 600 000 000 |
-| N.º de pistas y nombres | |
-| Duración del turno | |
-| Horario de apertura | |
-| Tarifa por invitado no residente | |
-| Máximo de invitados por reserva | |
-| Tono base del color de acento | |
-| Vivienda del usuario de ejemplo | |
+| N.º de pistas y nombres | No aplica|
+| Duración del turno | No aplica|
+| Horario de apertura | Disponible 24 horas|
+| Tarifa por invitado no residente | No aplica|
+| Máximo de invitados por reserva | No aplica|
+| Tono base del color de acento | Rojo oscuro #610000|
+| Vivienda del usuario de ejemplo |No aplica (usuario registrado en la aplicación) |

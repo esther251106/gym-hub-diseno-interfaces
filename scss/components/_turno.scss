@@ -22,6 +22,7 @@
 //   - El radio puede ocultarse visualmente, pero nunca con display: none
 //     (dejaría de ser accesible por teclado)
 // =============================================================
+
 @use "../abstracts" as *;
 
 @layer components {
@@ -32,9 +33,45 @@
     border: 1px solid var(--color-borde);
     border-radius: var(--radio-tarjeta);
     background-color: var(--color-superficie);
+    color: var(--color-texto);
     cursor: pointer;
+    min-block-size: 44px;
 
-    // TODO: .turno__control, .turno__hora, .turno__estado
-    // TODO: estados seleccionado, ocupado y foco
+    // Ocultamos visualmente el radio sin eliminarlo
+    .turno__control {
+      position: absolute;
+      inline-size: 1px;
+      block-size: 1px;
+      opacity: 0;
+    }
+
+    // Nombre de la rutina
+    .turno__hora {
+      font-weight: 700;
+    }
+
+    // Información secundaria
+    .turno__estado {
+      color: var(--color-texto-suave);
+      font-size: 0.875rem;
+    }
+
+    // Estado seleccionado
+    &:has(:checked) {
+      border: 2px solid var(--color-acento);
+      background-color: var(--color-acento-tenue);
+    }
+
+    // Estado ocupado
+    &:has(:disabled) {
+      opacity: 0.55;
+      cursor: not-allowed;
+      border-style: dashed;
+    }
+
+    // Estado de foco mediante teclado
+    &:has(:focus-visible) {
+      @include foco-visible;
+    }
   }
 }

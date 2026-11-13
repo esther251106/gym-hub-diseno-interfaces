@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Crear rutina · GYM HUB</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <a class="salto" href="#contenido">Saltar al contenido</a>
+
+    <header class="cabecera">
+        <div class="cabecera__interior contenedor">
+
+            <a class="cabecera__marca" href="index.html">GYM HUB</a>
+
+            <nav class="menu" aria-label="Principal">
+                <ul class="menu__lista">
+                    <li>
+                        <a class="menu__enlace" href="index.html">Rutinas</a>
+                    </li>
+                    <li>
+                        <a class="menu__enlace" href="mis-rutinas.html">Mis rutinas</a>
+                    </li>
+                    <li>
+                        <a class="menu__enlace" href="normas.html">Normas</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main id="contenido" class="contenedor">
+        <h1>Crear rutina</h1>
+        <p>Diseña tu entrenamiento y organiza los ejercicios que quieres realizar.</p>
+        <form action="rutina-creada.html" method="get">
+            <section>
+                <h2>Información de la rutina</h2>
+                <p>
+                    <label for="nombre-rutina">Nombre de la rutina:</label>
+                    <input type="text" id="nombre-rutina" name="nombre-rutina" required>
+                </p>
+                <p>
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion" rows="4"></textarea>
+                </p>
+                <p>
+                    <label for="nivel">Nivel de entrenamiento:</label>
+                    <select id="nivel" name="nivel" required>
+                        <option value="">Selecciona un nivel</option>
+                        <option value="principiante">Principiante</option>
+                        <option value="intermedio">Intermedio</option>
+                        <option value="avanzado">Avanzado</option>
+                    </select>
+                </p>
+            </section>
+
+            <section class="selector-ejercicios">
+
+                <h2>Elige tus ejercicios</h2>
+                <p>Organiza tu entrenamiento según los grupos musculares.</p>
+
+                <div class="selector-ejercicios__grupos">
+
+                    <fieldset class="grupo-muscular">
+                        <legend>Piernas y glúteos</legend>
+
+                        <label class="ejercicio-opcion" for="sentadilla">
+                            <input type="checkbox" id="sentadilla" name="ejercicios" value="sentadilla">
+                            <span>Sentadilla</span>
+                        </label>
+
+                        <label class="ejercicio-opcion" for="peso-muerto">
+                            <input type="checkbox" id="peso-muerto" name="ejercicios" value="peso-muerto">
+                            <span>Peso muerto</span>
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="grupo-muscular">
+                        <legend>Pecho</legend>
+
+                        <label class="ejercicio-opcion" for="press-banca">
+                            <input type="checkbox" id="press-banca" name="ejercicios" value="press-banca">
+                            <span>Press de banca</span>
+                        </label>
+
+                        <label class="ejercicio-opcion" for="flexiones">
+                            <input type="checkbox" id="flexiones" name="ejercicios" value="flexiones">
+                            <span>Flexiones</span>
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="grupo-muscular">
+                        <legend>Espalda</legend>
+
+                        <label class="ejercicio-opcion" for="remo">
+                            <input type="checkbox" id="remo" name="ejercicios" value="remo">
+                            <span>Remo con mancuerna</span>
+                        </label>
+
+                        <label class="ejercicio-opcion" for="jalon">
+                            <input type="checkbox" id="jalon" name="ejercicios" value="jalon">
+                            <span>Jalón al pecho</span>
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="grupo-muscular">
+                        <legend>Hombros</legend>
+
+                        <label class="ejercicio-opcion" for="press-militar">
+                            <input type="checkbox" id="press-militar" name="ejercicios" value="press-militar">
+                            <span>Press militar</span>
+                        </label>
+
+                        <label class="ejercicio-opcion" for="elevaciones">
+                            <input type="checkbox" id="elevaciones" name="ejercicios" value="elevaciones">
+                            <span>Elevaciones laterales</span>
+                        </label>
+                    </fieldset>
+                </div>
+            </section>
+
+            <p>
+                <button type="submit">Guardar rutina</button>
+            </p>
+        </form>
+        <p>
+            <a href="index.html">Volver a rutinas</a>
+        </p>
+    </main>
+
+
+    <footer class="pie">
+        <div class="pie__interior contenedor">
+
+            <address class="pie__datos">
+                GYM HUB · CIF H-0000000_<br>
+                Aplicación web (domicilio ficticio)<br>
+                <a href="mailto:gymhub@gmail.com">gymhub@gmail.com</a>
+            </address>
+
+            <nav aria-label="Legal">
+                <ul class="pie__enlaces">
+                    <li>
+                        <a href="aviso-legal.html">Aviso legal</a>
+                    </li>
+                    <li>
+                        <a href="privacidad.html">Privacidad</a>
+                    </li>
+                    <li>
+                        <a href="normas.html">Normas de uso</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <p class="pie__nota">
+                <small>Proyecto académico ficticio · DIW 0615 · 2.º DAW</small>
+            </p>
+
+        </div>
+    </footer>
+
+</body>
+</html>

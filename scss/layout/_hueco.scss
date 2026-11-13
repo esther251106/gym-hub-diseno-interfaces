@@ -1,0 +1,9 @@
+@use "../abstracts" as *;
+
+@layer layout {
+  .hueco {
+    padding: var(--espacio-l);
+    border: 1px dashed var(--color-borde-control);
+    color: var(--color-texto-suave);
+  }
+}

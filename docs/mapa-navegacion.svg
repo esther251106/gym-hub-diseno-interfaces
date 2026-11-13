@@ -1,0 +1,91 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="760" viewBox="0 0 1100 760">
+
+  <defs>
+    <marker id="flecha" markerWidth="10" markerHeight="10"
+      refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#b8b1b4"/>
+    </marker>
+    <style>
+      .titulo { font: bold 27px Arial; fill: #f5f1f2; }
+      .subtitulo { font: 16px Arial; fill: #b8b1b4; }
+      .pagina { fill: #222225; stroke: #9a2020; stroke-width: 2; rx: 12; }
+      .legal { fill: #222225; stroke: #c8a96b; stroke-width: 2; rx: 12; }
+      .texto { font: bold 17px Arial; fill: #f5f1f2; text-anchor: middle; }
+      .archivo { font: 13px Arial; fill: #b8b1b4; text-anchor: middle; }
+      .etiqueta { font: 13px Arial; fill: #f5f1f2; text-anchor: middle; }
+      .flecha { fill: none; stroke: #b8b1b4; stroke-width: 2; marker-end: url(#flecha); }
+      .comun { fill: #3a3034; stroke: #c8a96b; stroke-width: 2; rx: 12; }
+    </style>
+  </defs>
+
+  <rect width="1100" height="760" fill="#171719"/>
+
+  <text x="550" y="45" class="titulo" text-anchor="middle">
+    GYM HUB - MAPA DE NAVEGACIÓN
+  </text>
+  <text x="550" y="75" class="subtitulo" text-anchor="middle">
+    Diseño de Interfaces Web · 2º DAW
+  </text>
+
+  <!-- Navegación común -->
+  <rect x="350" y="105" width="400" height="85" class="comun"/>
+  <text x="550" y="137" class="texto">CABECERA Y PIE</text>
+  <text x="550" y="163" class="archivo">Menú y enlaces legales en todas las páginas</text>
+
+  <!-- Páginas de tarea -->
+  <rect x="40" y="310" width="220" height="100" class="pagina"/>
+  <text x="150" y="350" class="texto">Rutinas</text>
+  <text x="150" y="380" class="archivo">index.html</text>
+
+  <rect x="320" y="310" width="220" height="100" class="pagina"/>
+  <text x="430" y="350" class="texto">Crear rutina</text>
+  <text x="430" y="380" class="archivo">crear-rutina.html</text>
+
+  <rect x="600" y="310" width="220" height="100" class="pagina"/>
+  <text x="710" y="350" class="texto">Rutina creada</text>
+  <text x="710" y="380" class="archivo">rutina-creada.html</text>
+
+  <rect x="880" y="310" width="180" height="100" class="pagina"/>
+  <text x="970" y="350" class="texto">Mis rutinas</text>
+  <text x="970" y="380" class="archivo">mis-rutinas.html</text>
+
+  <!-- Flujo principal -->
+  <path d="M260 360 H315" class="flecha"/>
+  <text x="287" y="345" class="etiqueta">Crear</text>
+
+  <path d="M540 360 H595" class="flecha"/>
+  <text x="567" y="345" class="etiqueta">Guardar</text>
+
+  <path d="M820 360 H875" class="flecha"/>
+  <text x="847" y="345" class="etiqueta">Ver mis rutinas</text>
+
+  <!-- Páginas de lectura -->
+  <rect x="130" y="565" width="220" height="100" class="legal"/>
+  <text x="240" y="605" class="texto">Normas</text>
+  <text x="240" y="635" class="archivo">normas.html</text>
+
+  <rect x="440" y="565" width="220" height="100" class="legal"/>
+  <text x="550" y="605" class="texto">Aviso legal</text>
+  <text x="550" y="635" class="archivo">aviso-legal.html</text>
+
+  <rect x="750" y="565" width="220" height="100" class="legal"/>
+  <text x="860" y="605" class="texto">Privacidad</text>
+  <text x="860" y="635" class="archivo">privacidad.html</text>
+
+  <!-- Conexión navegación común -->
+  <path d="M550 190 V245 H150 V305" class="flecha"/>
+  <path d="M550 245 H970 V305" class="flecha"/>
+  <text x="550" y="235" class="etiqueta">Menú: Rutinas · Mis rutinas</text>
+
+  <!-- Conexión legal -->
+  <path d="M550 190 V510 H240 V560" class="flecha"/>
+  <path d="M550 510 V560" class="flecha"/>
+  <path d="M550 510 H860 V560" class="flecha"/>
+  <text x="550" y="495" class="etiqueta">Pie: Normas · Aviso legal · Privacidad</text>
+
+  <text x="550" y="720" class="subtitulo" text-anchor="middle">
+    Las páginas comparten cabecera, menú principal y pie legal.
+  </text>
+
+</svg>

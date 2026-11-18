@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es">
 
@@ -23,7 +24,7 @@
                         <a class="menu__enlace" href="index.html">Rutinas</a>
                     </li>
                     <li>
-                        <a class="menu__enlace" href="mis-rutinas.html">Mis rutinas</a>
+                        <a class="menu__enlace" href="mis-rutinas.html" aria-current="page">Mis rutinas</a>
                     </li>
                     <li>
                         <a class="menu__enlace" href="normas.html">Normas</a>
@@ -35,28 +36,80 @@
     </header>
 
     <main id="contenido" class="contenedor">
-        <h1>Mis rutinas</h1>
-        <p>Consulta y organiza los entrenamientos que has creado en GYM HUB.</p>
-        <section>
-            <h2>Tus entrenamientos</h2>
-            <article>
-                <h3>Piernas y glúteos</h3>
-                <p>Entrenamiento centrado en el tren inferior.</p>
-                <p>Nivel: Intermedio</p>
-                <a href="crear-rutina.html">Crear una nueva rutina</a>
-            </article>
-            <article>
-                <h3>Pecho y espalda</h3>
-                <p>Entrenamiento para trabajar el tren superior.</p>
-                <p>Nivel: Principiante</p>
-            </article>
+
+        <section class="mis-rutinas">
+            <div class="mis-rutinas__cabecera">
+                <div>
+                    <p class="mis-rutinas__etiqueta">MI ESPACIO DE ENTRENAMIENTO</p>
+                    <h1>Mis rutinas</h1>
+                    <p class="mis-rutinas__descripcion">
+                        Consulta y organiza los entrenamientos que has creado en GYM HUB.
+                    </p>
+                </div>
+
+                <a class="boton boton--principal" href="crear-rutina.html">
+                    + Crear rutina
+                </a>
+            </div>
+
+            <section class="lista-rutinas" aria-labelledby="titulo-rutinas">
+
+                <div class="lista-rutinas__cabecera">
+                    <h2 id="titulo-rutinas">Tus entrenamientos</h2>
+                    <p>2 rutinas disponibles</p>
+                </div>
+
+                <div class="lista-rutinas__rejilla">
+
+                    <article class="tarjeta-rutina">
+                        <div class="tarjeta-rutina__superior">
+                            <span class="tarjeta-rutina__icono" aria-hidden="true">01</span>
+                            <span class="tarjeta-rutina__nivel">Intermedio</span>
+                        </div>
+
+                        <div class="tarjeta-rutina__contenido">
+                            <p class="tarjeta-rutina__categoria">TREN INFERIOR</p>
+                            <h3>Piernas y glúteos</h3>
+                            <p class="tarjeta-rutina__descripcion">
+                                Entrenamiento centrado en el tren inferior.
+                            </p>
+                        </div>
+
+                        <div class="tarjeta-rutina__pie">
+                            <span>GYM HUB</span>
+                            <a href="crear-rutina.html">Crear otra rutina</a>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-rutina">
+                        <div class="tarjeta-rutina__superior">
+                            <span class="tarjeta-rutina__icono" aria-hidden="true">02</span>
+                            <span class="tarjeta-rutina__nivel">Principiante</span>
+                        </div>
+
+                        <div class="tarjeta-rutina__contenido">
+                            <p class="tarjeta-rutina__categoria">TREN SUPERIOR</p>
+                            <h3>Pecho y espalda</h3>
+                            <p>
+                                Entrenamiento para trabajar el tren superior.
+                            </p>
+                        </div>
+
+                        <div class="tarjeta-rutina__pie">
+                            <span>GYM HUB</span>
+                            <a href="crear-rutina.html">Crear otra rutina</a>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <div class="mis-rutinas__volver">
+                <a href="index.html">← Volver a rutinas</a>
+            </div>
+
         </section>
-        <p>
-            <a href="crear-rutina.html">Crear rutina</a>
-        </p>
-        <p>
-            <a href="index.html">Volver a rutinas</a>
-        </p>
+
     </main>
 
     <footer class="pie">

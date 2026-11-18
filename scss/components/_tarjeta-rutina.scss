@@ -1,0 +1,173 @@
+@use "sass:map";
+@use "../abstracts/tokens" as *;
+
+@layer components {
+  .mis-rutinas {
+    padding-block: map.get($espacios, "2xl");
+  }
+
+  .mis-rutinas__cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: map.get($espacios, "l");
+    margin-bottom: map.get($espacios, "2xl");
+  }
+
+  .mis-rutinas__etiqueta {
+    color: var(--color-acento);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+
+  .mis-rutinas__descripcion {
+    max-width: 600px;
+    color: var(--color-texto-suave);
+  }
+
+  .lista-rutinas__cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: map.get($espacios, "m");
+    margin-bottom: map.get($espacios, "l");
+  }
+
+  .lista-rutinas__cabecera p {
+    color: var(--color-texto-suave);
+    font-size: 0.9rem;
+  }
+
+  .lista-rutinas__rejilla {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: map.get($espacios, "l");
+  }
+
+  .tarjeta-rutina {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+    padding: map.get($espacios, "l");
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: map.get($radios, "tarjeta");
+    box-shadow: map.get($sombras, "tarjeta");
+    transition: transform 180ms ease, border-color 180ms ease;
+  }
+
+  .tarjeta-rutina:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-acento);
+  }
+
+  .tarjeta-rutina__superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: map.get($espacios, "s");
+  }
+
+  .tarjeta-rutina__icono {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    color: var(--color-sobre-acento);
+    background: var(--color-acento);
+    border-radius: map.get($radios, "control");
+    font-weight: 700;
+  }
+
+  .tarjeta-rutina__nivel {
+    padding: map.get($espacios, "2xs") map.get($espacios, "s");
+    color: var(--color-acento);
+    background: var(--color-acento-tenue);
+    border-radius: map.get($radios, "pildora");
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .tarjeta-rutina__contenido {
+    margin-block: map.get($espacios, "l");
+  }
+
+  .tarjeta-rutina__categoria {
+    color: var(--color-texto-suave);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+
+  .tarjeta-rutina__contenido h3 {
+    margin-block: map.get($espacios, "2xs");
+    color: var(--color-texto);
+    font-size: 1.4rem;
+  }
+
+  .tarjeta-rutina__descripcion {
+    color: var(--color-texto-suave);
+    line-height: 1.6;
+  }
+
+  .tarjeta-rutina__pie {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: map.get($espacios, "s");
+    padding-top: map.get($espacios, "m");
+    border-top: 1px solid var(--color-borde);
+    font-size: 0.85rem;
+  }
+
+  .tarjeta-rutina__pie > span {
+    color: var(--color-texto-suave);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+
+  .tarjeta-rutina__pie a,
+  .mis-rutinas__volver a {
+    color: var(--color-acento);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .tarjeta-rutina__pie :where(a:hover),
+  .mis-rutinas__volver :where(a:hover) {
+    text-decoration: underline;
+  }
+
+  .mis-rutinas__volver {
+    margin-top: map.get($espacios, "xl");
+  }
+
+  @media (max-width: 700px) {
+    .mis-rutinas__cabecera {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .lista-rutinas__rejilla {
+      grid-template-columns: 1fr;
+    }
+
+    .lista-rutinas__cabecera {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: map.get($espacios, "2xs");
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tarjeta-rutina {
+      transition: none;
+    }
+
+    .tarjeta-rutina:hover {
+      transform: none;
+    }
+  }
+}

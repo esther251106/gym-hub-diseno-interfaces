@@ -1,0 +1,155 @@
+
+@use "sass:map";
+@use "../abstracts/tokens" as *;
+
+@layer components {
+  .crear-rutina {
+    padding-block: map.get($espacios, "2xl");
+  }
+
+  .crear-rutina__cabecera {
+    margin-bottom: map.get($espacios, "2xl");
+  }
+
+  .formulario-rutina {
+    display: grid;
+    gap: map.get($espacios, "xl");
+    max-width: 1000px;
+    margin-inline: auto;
+  }
+
+  .formulario-rutina__seccion {
+    padding: map.get($espacios, "l");
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: map.get($radios, "tarjeta");
+    box-shadow: map.get($sombras, "tarjeta");
+  }
+
+  .formulario-rutina__titulo {
+    display: flex;
+    align-items: center;
+    gap: map.get($espacios, "m");
+    margin-bottom: map.get($espacios, "l");
+  }
+
+  .formulario-rutina__titulo h2 {
+    margin-bottom: map.get($espacios, "2xs");
+  }
+
+  .formulario-rutina__titulo p {
+    color: var(--color-texto-suave);
+    font-size: 0.9rem;
+  }
+
+  .formulario-rutina__campos {
+    display: grid;
+    gap: map.get($espacios, "m");
+  }
+
+  .campo-rutina {
+    display: grid;
+    gap: map.get($espacios, "2xs");
+  }
+
+  .campo-rutina label {
+    color: var(--color-texto);
+    font-weight: 600;
+  }
+
+  .campo-rutina input,
+  .campo-rutina textarea,
+  .campo-rutina select {
+    width: 100%;
+    padding: map.get($espacios, "s");
+    color: var(--color-texto);
+    background: var(--color-fondo);
+    border: 1px solid var(--color-borde);
+    border-radius: map.get($radios, "control");
+    font: inherit;
+  }
+
+  .campo-rutina input:focus,
+  .campo-rutina textarea:focus,
+  .campo-rutina select:focus {
+    border-color: var(--color-acento);
+    outline: 2px solid var(--color-acento-tenue);
+    outline-offset: 2px;
+  }
+
+  .campo-rutina textarea {
+    resize: vertical;
+  }
+
+  .selector-ejercicios__grupos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: map.get($espacios, "m");
+  }
+
+  .grupo-muscular {
+    min-width: 0;
+    padding: map.get($espacios, "m");
+    border: 1px solid var(--color-borde);
+    border-radius: map.get($radios, "control");
+  }
+
+  .grupo-muscular legend {
+    padding-inline: map.get($espacios, "2xs");
+    color: var(--color-acento);
+    font-weight: 700;
+  }
+
+  .ejercicio-opcion {
+    display: flex;
+    align-items: center;
+    gap: map.get($espacios, "s");
+    padding-block: map.get($espacios, "xs");
+    color: var(--color-texto);
+    cursor: pointer;
+  }
+
+  .ejercicio-opcion input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--color-acento);
+  }
+
+  .formulario-rutina__acciones {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: map.get($espacios, "m");
+  }
+
+  .formulario-rutina__acciones > a {
+    color: var(--color-texto-suave);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .formulario-rutina__acciones > a:hover {
+    color: var(--color-acento);
+    text-decoration: underline;
+  }
+
+  @media (max-width: 700px) {
+    .formulario-rutina__seccion {
+      padding: map.get($espacios, "m");
+    }
+
+    .selector-ejercicios__grupos {
+      grid-template-columns: 1fr;
+    }
+
+    .formulario-rutina__acciones {
+      align-items: stretch;
+      flex-direction: column-reverse;
+    }
+
+    .formulario-rutina__acciones > a {
+      text-align: center;
+      padding-block: map.get($espacios, "s");
+    }
+  }
+}

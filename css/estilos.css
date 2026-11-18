@@ -266,29 +266,92 @@
 }
 @layer layout {
   .pie {
+    margin-top: var(--espacio-2xl);
+    padding-block: var(--espacio-xl) var(--espacio-m);
+    background: var(--color-superficie);
     border-top: 1px solid var(--color-borde);
     font-size: var(--paso-1);
   }
   .pie__interior {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--espacio-m);
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: start;
+    gap: var(--espacio-xl);
   }
   .pie__datos {
+    display: grid;
+    gap: var(--espacio-xs);
+    color: var(--color-texto-suave);
     font-style: normal;
+    line-height: 1.8;
+  }
+  .pie__datos::before {
+    content: "GYM HUB";
+    margin-bottom: var(--espacio-xs);
+    color: var(--color-acento);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+  }
+  .pie__datos a {
+    width: fit-content;
+    color: var(--color-texto);
+    text-decoration: none;
+    transition: color 180ms ease;
+  }
+  .pie__datos a:hover {
+    color: var(--color-acento);
+  }
+  .pie__interior nav {
+    justify-self: end;
   }
   .pie__enlaces {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--espacio-s);
+    justify-content: flex-end;
+    gap: var(--espacio-m);
     margin: 0;
     padding: 0;
     list-style: none;
   }
+  .pie__enlaces a {
+    color: var(--color-texto-suave);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 180ms ease;
+  }
+  .pie__enlaces a:hover {
+    color: var(--color-acento);
+  }
   .pie__nota {
-    flex-basis: 100%;
+    grid-column: 1/-1;
+    margin-top: var(--espacio-m);
+    padding-top: var(--espacio-m);
+    color: var(--color-texto-suave);
+    border-top: 1px solid var(--color-borde);
+    text-align: center;
+  }
+  @media (max-width: 700px) {
+    .pie__interior {
+      grid-template-columns: 1fr;
+      gap: var(--espacio-l);
+    }
+    .pie__interior nav {
+      justify-self: start;
+    }
+    .pie__enlaces {
+      justify-content: flex-start;
+      gap: var(--espacio-s) var(--espacio-m);
+    }
+    .pie__nota {
+      margin-top: 0;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .pie__datos a,
+    .pie__enlaces a {
+      transition: none;
+    }
   }
 }
 @layer layout {
@@ -528,6 +591,396 @@
   }
   .aviso__concepto {
     font-family: var(--fuente-mono);
+  }
+}
+@layer components {
+  .mis-rutinas {
+    padding-block: 4rem;
+  }
+  .mis-rutinas__cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+  .mis-rutinas__etiqueta {
+    color: var(--color-acento);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+  .mis-rutinas__descripcion {
+    max-width: 600px;
+    color: var(--color-texto-suave);
+  }
+  .lista-rutinas__cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .lista-rutinas__cabecera p {
+    color: var(--color-texto-suave);
+    font-size: 0.9rem;
+  }
+  .lista-rutinas__rejilla {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+  .tarjeta-rutina {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 250px;
+    padding: 2rem;
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 2px rgb(15 23 42 / 0.08), 0 4px 12px rgb(15 23 42 / 0.06);
+    transition: transform 180ms ease, border-color 180ms ease;
+  }
+  .tarjeta-rutina:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-acento);
+  }
+  .tarjeta-rutina__superior {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  .tarjeta-rutina__icono {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    color: var(--color-sobre-acento);
+    background: var(--color-acento);
+    border-radius: 0.5rem;
+    font-weight: 700;
+  }
+  .tarjeta-rutina__nivel {
+    padding: 0.5rem 1rem;
+    color: var(--color-acento);
+    background: var(--color-acento-tenue);
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  .tarjeta-rutina__contenido {
+    margin-block: 2rem;
+  }
+  .tarjeta-rutina__categoria {
+    color: var(--color-texto-suave);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+  .tarjeta-rutina__contenido h3 {
+    margin-block: 0.5rem;
+    color: var(--color-texto);
+    font-size: 1.4rem;
+  }
+  .tarjeta-rutina__descripcion {
+    color: var(--color-texto-suave);
+    line-height: 1.6;
+  }
+  .tarjeta-rutina__pie {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-borde);
+    font-size: 0.85rem;
+  }
+  .tarjeta-rutina__pie > span {
+    color: var(--color-texto-suave);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+  .tarjeta-rutina__pie a,
+  .mis-rutinas__volver a {
+    color: var(--color-acento);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .tarjeta-rutina__pie :where(a:hover),
+  .mis-rutinas__volver :where(a:hover) {
+    text-decoration: underline;
+  }
+  .mis-rutinas__volver {
+    margin-top: 3rem;
+  }
+  @media (max-width: 700px) {
+    .mis-rutinas__cabecera {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    .lista-rutinas__rejilla {
+      grid-template-columns: 1fr;
+    }
+    .lista-rutinas__cabecera {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .tarjeta-rutina {
+      transition: none;
+    }
+    .tarjeta-rutina:hover {
+      transform: none;
+    }
+  }
+}
+@layer components {
+  .crear-rutina {
+    padding-block: 4rem;
+  }
+  .crear-rutina__cabecera {
+    margin-bottom: 4rem;
+  }
+  .formulario-rutina {
+    display: grid;
+    gap: 3rem;
+    max-width: 1000px;
+    margin-inline: auto;
+  }
+  .formulario-rutina__seccion {
+    padding: 2rem;
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 2px rgb(15 23 42 / 0.08), 0 4px 12px rgb(15 23 42 / 0.06);
+  }
+  .formulario-rutina__titulo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .formulario-rutina__titulo h2 {
+    margin-bottom: 0.5rem;
+  }
+  .formulario-rutina__titulo p {
+    color: var(--color-texto-suave);
+    font-size: 0.9rem;
+  }
+  .formulario-rutina__campos {
+    display: grid;
+    gap: 1.5rem;
+  }
+  .campo-rutina {
+    display: grid;
+    gap: 0.5rem;
+  }
+  .campo-rutina label {
+    color: var(--color-texto);
+    font-weight: 600;
+  }
+  .campo-rutina input,
+  .campo-rutina textarea,
+  .campo-rutina select {
+    width: 100%;
+    padding: 1rem;
+    color: var(--color-texto);
+    background: var(--color-fondo);
+    border: 1px solid var(--color-borde);
+    border-radius: 0.5rem;
+    font: inherit;
+  }
+  .campo-rutina input:focus,
+  .campo-rutina textarea:focus,
+  .campo-rutina select:focus {
+    border-color: var(--color-acento);
+    outline: 2px solid var(--color-acento-tenue);
+    outline-offset: 2px;
+  }
+  .campo-rutina textarea {
+    resize: vertical;
+  }
+  .selector-ejercicios__grupos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+  .grupo-muscular {
+    min-width: 0;
+    padding: 1.5rem;
+    border: 1px solid var(--color-borde);
+    border-radius: 0.5rem;
+  }
+  .grupo-muscular legend {
+    padding-inline: 0.5rem;
+    color: var(--color-acento);
+    font-weight: 700;
+  }
+  .ejercicio-opcion {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 0.75rem;
+    color: var(--color-texto);
+    cursor: pointer;
+  }
+  .ejercicio-opcion input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--color-acento);
+  }
+  .formulario-rutina__acciones {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+  }
+  .formulario-rutina__acciones > a {
+    color: var(--color-texto-suave);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .formulario-rutina__acciones > a:hover {
+    color: var(--color-acento);
+    text-decoration: underline;
+  }
+  @media (max-width: 700px) {
+    .formulario-rutina__seccion {
+      padding: 1.5rem;
+    }
+    .selector-ejercicios__grupos {
+      grid-template-columns: 1fr;
+    }
+    .formulario-rutina__acciones {
+      align-items: stretch;
+      flex-direction: column-reverse;
+    }
+    .formulario-rutina__acciones > a {
+      text-align: center;
+      padding-block: 1rem;
+    }
+  }
+}
+@layer components {
+  .documento-legal {
+    max-width: 900px;
+    margin-inline: auto;
+    padding-block: 4rem;
+  }
+  .documento-legal__cabecera {
+    margin-bottom: 4rem;
+  }
+  .documento-legal__cabecera h1 {
+    margin-block: 0.75rem;
+  }
+  .documento-legal__indice {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-left: 4px solid var(--color-acento);
+    border-radius: 0.75rem;
+  }
+  .documento-legal__indice h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  .documento-legal__indice ol {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 2rem;
+    padding-left: 2rem;
+  }
+  .documento-legal__indice li {
+    color: var(--color-acento);
+  }
+  .documento-legal__indice a {
+    color: var(--color-texto);
+    text-decoration: none;
+    transition: color 180ms ease;
+  }
+  .documento-legal__indice a:hover {
+    color: var(--color-acento);
+    text-decoration: underline;
+  }
+  .documento-legal__contenido {
+    padding: 2rem;
+    background: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 2px rgb(15 23 42 / 0.08), 0 4px 12px rgb(15 23 42 / 0.06);
+  }
+  .documento-legal__contenido section {
+    position: relative;
+    padding-block: 2rem;
+    border-bottom: 1px solid var(--color-borde);
+  }
+  .documento-legal__contenido section:first-child {
+    padding-top: 0;
+  }
+  .documento-legal__contenido section:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+  .documento-legal__numero {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    color: var(--color-acento);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+  .documento-legal__contenido h2 {
+    margin-bottom: 1.5rem;
+    color: var(--color-texto);
+    font-size: 1.35rem;
+  }
+  .documento-legal__contenido p,
+  .documento-legal__contenido li {
+    color: var(--color-texto-suave);
+    line-height: 1.8;
+  }
+  .documento-legal__contenido p {
+    margin-bottom: 1rem;
+  }
+  .documento-legal__contenido ul {
+    display: grid;
+    gap: 0.5rem;
+    margin-block: 1.5rem;
+    padding-left: 2rem;
+  }
+  .documento-legal__contenido a {
+    color: var(--color-acento);
+    font-weight: 600;
+  }
+  .documento-legal__volver {
+    margin-top: 3rem;
+  }
+  .documento-legal__volver a {
+    color: var(--color-acento);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .documento-legal__volver a:hover {
+    text-decoration: underline;
+  }
+  @media (max-width: 700px) {
+    .documento-legal__indice,
+    .documento-legal__contenido {
+      padding: 1.5rem;
+    }
+    .documento-legal__indice ol {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .documento-legal__indice a {
+      transition: none;
+    }
   }
 }
 @layer utilities {

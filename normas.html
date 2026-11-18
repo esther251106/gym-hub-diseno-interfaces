@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es">
 
@@ -26,7 +27,7 @@
                         <a class="menu__enlace" href="mis-rutinas.html">Mis rutinas</a>
                     </li>
                     <li>
-                        <a class="menu__enlace" href="normas.html">Normas</a>
+                        <a class="menu__enlace" href="normas.html" aria-current="page">Normas</a>
                     </li>
                 </ul>
             </nav>
@@ -34,32 +35,55 @@
         </div>
     </header>
 
-    
     <main id="contenido" class="contenedor">
-        <article class="lectura">
-            <h1>Normas de uso de GYM HUB</h1>
-            <nav aria-label="Índice del documento">
+        <article class="documento-legal">
+
+            <header class="documento-legal__cabecera">
+                <p class="mis-rutinas__etiqueta">GYM HUB · INFORMACIÓN</p>
+                <h1>Normas de uso</h1>
+                <p class="mis-rutinas__descripcion">
+                    Conoce las pautas para utilizar GYM HUB de forma responsable y segura.
+                </p>
+            </header>
+
+            <nav class="documento-legal__indice" aria-label="Índice del documento">
+                <h2>Contenido del documento</h2>
                 <ol>
                     <li><a href="#uso-plataforma">Uso de la plataforma</a></li>
                     <li><a href="#contenido-entrenamientos">Contenido y entrenamientos</a></li>
                     <li><a href="#responsabilidad">Responsabilidad del usuario</a></li>
                 </ol>
             </nav>
-            <section id="uso-plataforma" aria-labelledby="titulo-uso">
-                <h2 id="titulo-uso">Uso de la plataforma</h2>
-                <p>GYM HUB es una plataforma destinada a ayudar a los usuarios a organizar sus entrenamientos y consultar ejercicios. El usuario debe utilizar sus funcionalidades de forma responsable y respetuosa.</p>
-                <p>No está permitido utilizar la plataforma para realizar actividades ilegales, perjudicar a otros usuarios o intentar alterar su funcionamiento.</p>
-            </section>
-            <section id="contenido-entrenamientos" aria-labelledby="titulo-contenido">
-                <h2 id="titulo-contenido">Contenido y entrenamientos</h2>
-                <p>Los usuarios deben introducir información adecuada al crear sus rutinas y seleccionar ejercicios acordes con sus objetivos y capacidades.</p>
-                <p>Los contenidos de GYM HUB tienen carácter informativo y orientativo. No sustituyen el asesoramiento de profesionales del deporte o de la salud.</p>
-            </section>
-            <section id="responsabilidad" aria-labelledby="titulo-responsabilidad">
-                <h2 id="titulo-responsabilidad">Responsabilidad del usuario</h2>
-                <p>Cada usuario es responsable del uso que haga de las rutinas y ejercicios disponibles en la plataforma.</p>
-                <p>Se recomienda realizar los ejercicios con una técnica adecuada, respetar los límites personales y detener la actividad si aparece dolor o malestar.</p>
-            </section>
+
+            <div class="documento-legal__contenido">
+
+                <section id="uso-plataforma" aria-labelledby="titulo-uso">
+                    <span class="documento-legal__numero">01</span>
+                    <h2 id="titulo-uso">Uso de la plataforma</h2>
+                    <p>GYM HUB es una plataforma destinada a ayudar a los usuarios a organizar sus entrenamientos y consultar ejercicios. El usuario debe utilizar sus funcionalidades de forma responsable y respetuosa.</p>
+                    <p>No está permitido utilizar la plataforma para realizar actividades ilegales, perjudicar a otros usuarios o intentar alterar su funcionamiento.</p>
+                </section>
+
+                <section id="contenido-entrenamientos" aria-labelledby="titulo-contenido">
+                    <span class="documento-legal__numero">02</span>
+                    <h2 id="titulo-contenido">Contenido y entrenamientos</h2>
+                    <p>Los usuarios deben introducir información adecuada al crear sus rutinas y seleccionar ejercicios acordes con sus objetivos y capacidades.</p>
+                    <p>Los contenidos de GYM HUB tienen carácter informativo y orientativo. No sustituyen el asesoramiento de profesionales del deporte o de la salud.</p>
+                </section>
+
+                <section id="responsabilidad" aria-labelledby="titulo-responsabilidad">
+                    <span class="documento-legal__numero">03</span>
+                    <h2 id="titulo-responsabilidad">Responsabilidad del usuario</h2>
+                    <p>Cada usuario es responsable del uso que haga de las rutinas y ejercicios disponibles en la plataforma.</p>
+                    <p>Se recomienda realizar los ejercicios con una técnica adecuada, respetar los límites personales y detener la actividad si aparece dolor o malestar.</p>
+                </section>
+
+            </div>
+
+            <p class="documento-legal__volver">
+                <a href="index.html">← Volver a rutinas</a>
+            </p>
+
         </article>
     </main>
 

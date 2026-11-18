@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es">
 
@@ -34,25 +35,50 @@
         </div>
     </header>
 
-    
     <main id="contenido" class="contenedor">
-        <h1>¡Rutina creada!</h1>
-        <p>Tu entrenamiento se ha añadido correctamente a GYM HUB.</p>
-        <section>
-            <h2>Tu rutina está lista</h2>
-            <p>Ya puedes consultar tus rutinas y organizar tus próximos entrenamientos.</p>
-        </section>
-        <p>
-            <a href="mis-rutinas.html">Ver mis rutinas</a>
-        </p>
-        <p>
-            <a href="crear-rutina.html">Crear otra rutina</a>
-        </p>
-        <p>
-            <a href="index.html">Volver a rutinas</a>
-        </p>
-    </main>
 
+        <article class="documento-legal">
+
+            <header class="documento-legal__cabecera">
+                <span class="mis-rutinas__etiqueta">GYM HUB · CONFIRMACIÓN</span>
+                <h1>¡Rutina creada!</h1>
+                <p class="mis-rutinas__descripcion">
+                    Tu entrenamiento está preparado. Ahora puedes seguir
+                    organizando tus próximos objetivos.
+                </p>
+            </header>
+
+            <div class="documento-legal__contenido">
+
+                <section aria-labelledby="titulo-confirmacion">
+                    <span class="documento-legal__numero">01</span>
+                    <h2 id="titulo-confirmacion">Tu rutina está lista</h2>
+                    <p>
+                        Has completado el proceso de creación de tu rutina.
+                        Ya puedes consultar tus entrenamientos y continuar
+                        planificando tu actividad física.
+                    </p>
+                </section>
+
+                <section aria-labelledby="titulo-siguientes-pasos">
+                    <span class="documento-legal__numero">02</span>
+                    <h2 id="titulo-siguientes-pasos">¿Qué quieres hacer ahora?</h2>
+                    <p>
+                        Puedes consultar tus rutinas, crear un nuevo
+                        entrenamiento o volver a la página principal.
+                    </p>
+
+                    <div class="formulario-rutina__acciones">
+                        <a href="mis-rutinas.html">Ver mis rutinas</a>
+                        <a href="crear-rutina.html" class="boton-principal">Crear otra rutina</a>                        <a href="index.html">Volver a rutinas</a>
+                    </div>
+                </section>
+
+            </div>
+
+        </article>
+
+    </main>
 
     <footer class="pie">
         <div class="pie__interior contenedor">

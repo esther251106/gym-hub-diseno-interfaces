@@ -33,26 +33,74 @@
         </div>
     </header>
 
+    
     <main id="contenido" class="contenedor">
-        <h1>Rutinas</h1>
-        <p>Descubre y organiza tus entrenamientos con GYM HUB.</p>
-        <section>
-            <h2>Explora tus entrenamientos</h2>
-            <article>
-                <h3>Piernas y glúteos</h3>
-                <p>Rutina centrada en fortalecer el tren inferior.</p>
-                <p>Nivel: Intermedio</p>
-            </article>
-            <article>
-                <h3>Pecho y espalda</h3>
-                <p>Entrenamiento orientado al trabajo del tren superior.</p>
-                <p>Nivel: Principiante</p>
-            </article>
+        <section class="mis-rutinas">
+            <div class="mis-rutinas__cabecera">
+                <div>
+                    <p class="mis-rutinas__etiqueta">ENTRENAMIENTO</p>
+                    <h1>Rutinas</h1>
+                    <p class="mis-rutinas__descripcion">
+                        Descubre y organiza tus entrenamientos con GYM HUB.
+                    </p>
+                </div>
+
+                <a class="boton boton--principal" href="crear-rutina.html">
+                    + Crear rutina
+                </a>
+            </div>
+
+            <section class="lista-rutinas">
+                <div class="lista-rutinas__cabecera">
+                    <h2>Explora tus entrenamientos</h2>
+                    <p>2 rutinas disponibles</p>
+                </div>
+
+                <div class="lista-rutinas__rejilla">
+                    <article class="tarjeta-rutina">
+                        <div class="tarjeta-rutina__superior">
+                            <span class="tarjeta-rutina__icono">01</span>
+                            <span class="tarjeta-rutina__nivel">Intermedio</span>
+                        </div>
+
+                        <div class="tarjeta-rutina__contenido">
+                            <p class="tarjeta-rutina__categoria">TREN INFERIOR</p>
+                            <h3>Piernas y glúteos</h3>
+                            <p class="tarjeta-rutina__descripcion">
+                                Rutina centrada en fortalecer el tren inferior.
+                            </p>
+                        </div>
+
+                        <div class="tarjeta-rutina__pie">
+                            <span>GYM HUB</span>
+                            <a href="crear-rutina.html">Crear rutina</a>
+                        </div>
+                    </article>
+
+                    <article class="tarjeta-rutina">
+                        <div class="tarjeta-rutina__superior">
+                            <span class="tarjeta-rutina__icono">02</span>
+                            <span class="tarjeta-rutina__nivel">Principiante</span>
+                        </div>
+
+                        <div class="tarjeta-rutina__contenido">
+                            <p class="tarjeta-rutina__categoria">TREN SUPERIOR</p>
+                            <h3>Pecho y espalda</h3>
+                            <p class="tarjeta-rutina__descripcion">
+                                Entrenamiento orientado al trabajo del tren superior.
+                            </p>
+                        </div>
+
+                        <div class="tarjeta-rutina__pie">
+                            <span>GYM HUB</span>
+                            <a href="crear-rutina.html">Crear rutina</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
         </section>
-        <p>
-            <a href="crear-rutina.html">Crear una rutina</a>
-        </p>    
     </main>
+
 
     <footer class="pie">
         <div class="pie__interior contenedor">

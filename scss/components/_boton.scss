@@ -71,4 +71,20 @@
       filter: brightness(0.9);
     }
   }
+
+  .boton--peligro {
+    &:hover {
+      background-color: var(--color-dorado);
+      filter: brightness(0.9);
+    }
+
+    &:focus-visible {
+      @include foco-visible;
+    }
+    
+     &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
 }
